@@ -7,21 +7,29 @@
     "build-tokens:light": "paragon build-tokens --source ./paragon/tokens/src/ --build-dir ./paragon/build -t light --verbose",
     "build-tokens:dark": "paragon build-tokens --source ./paragon/tokens/src/ --build-dir ./paragon/build -t dark --verbose",
     "build-scss": "paragon build-scss --corePath ./paragon/core.scss --themesPath ./paragon/build/themes",
-    "build": "make build",
-    "build:watch": "nodemon --ignore dist -x \"make build\"",
+    "copy-assets": "mkdir -p dist/static && cp -rv static/* dist/static/",
+    "build": "mkdir -p dist && npm run build-tokens && npm run build-scss && npm run copy-assets",
+    "build:watch": "nodemon --ignore dist -x \"npm run build\"",
     "serve": "paragon serve-theme-css -h 0.0.0.0",
     "paragon:help": "paragon help"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edly-io/brand-openedx.git"
-  },
+  "files": [
+    "dist",
+    "static",
+    "paragon",
+    "package.json",
+    "README.md"
+],  
+"repository": {
+  "type": "git",
+  "url": "git+https://github.com/l1ph0x/brand-openedx.git"
+},
   "author": "Open edX Community",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/edly-io/brand-openedx/issues"
+    "url": "https://github.com/l1ph0x/brand-openedx/issues"
   },
-  "homepage": "https://github.com/edly-io/brand-openedx#readme",
+  "homepage": "https://github.com/l1ph0x/brand-openedx#readme",
   "publishConfig": {
     "access": "public"
   },
