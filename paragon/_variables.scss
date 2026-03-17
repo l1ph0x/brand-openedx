@@ -2,7 +2,35 @@
 $page-color-transition: transparent .2s ease, color .2s ease;
 
 // ------------------------------------------------------
+// Base font stack
+// ------------------------------------------------------
+
+$pgn-typography-font-family-sans-serif:
+  "BPG Arial",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  "Helvetica Neue",
+  Arial,
+  sans-serif;
+
+// ------------------------------------------------------
+// Paragon typography tokens
+// ------------------------------------------------------
+
+$pgn-typography-font-family-base: $pgn-typography-font-family-sans-serif;
+$pgn-typography-font-family-heading: $pgn-typography-font-family-sans-serif;
+
+// ------------------------------------------------------
+// Legacy Bootstrap compatibility
+// ------------------------------------------------------
+
+$font-family-base: $pgn-typography-font-family-sans-serif;
+
+// ------------------------------------------------------
 // Logo size
 // ------------------------------------------------------
 
 $pgn-logo-height: 50px;
+
