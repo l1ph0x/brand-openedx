@@ -8,6 +8,7 @@
 
 @import "~@openedx/paragon/dist/Button/mixins";
 
-@import "./variables";
-@import "./fonts";
+
+@import "./fonts";      // Loads BPG Arial
+@import "./variables";  // Sets default fonts to BPG Arial
 @import "./overrides";
