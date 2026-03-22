@@ -1533,15 +1533,11 @@ body {
 @media (min-width: 992px) {
   #root header.site-header-desktop .logo {
     margin: 0 18px 0 0 !important;
-    height: 50px;
-    margin: 5px 18px 5px 0 !important;
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
   #root header.site-header-desktop .logo {
     margin: 0 18px 0 0 !important;
-    height: 50px;
-    margin: 5px 18px 5px 0 !important;
   }
 }
 #root header.site-header-desktop .logo img {
@@ -1628,15 +1624,11 @@ body {
 @media (min-width: 992px) {
   #root header.customise.learning-header .logo {
     margin: 0 18px 0 0 !important;
-    height: 50px;
-    margin: 5px 18px 5px 0 !important;
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
   #root header.customise.learning-header .logo {
     margin: 0 18px 0 0 !important;
-    height: 50px;
-    margin: 5px 18px 5px 0 !important;
   }
 }
 #root header.customise.learning-header .logo img {
@@ -1999,26 +1991,9 @@ body {
   line-height: 20px;
   color: #374151;
 }
-/* Desktop/laptop only: 50px logo on homepage and logged-in headers.
-   Mobile keeps upstream sizing (21px). */
+/* Legacy homepage only: desktop/laptop gets 50px logo.
+   Mobile stays upstream. Logged-in pages stay upstream. */
 @media (min-width: 992px) {
-  #root header.site-header-desktop .container-fluid {
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-  }
-  #root header.site-header-desktop .logo img {
-    height: 50px;
-    width: auto;
-  }
-  #root header.customise.learning-header .logo img {
-    height: 50px;
-    width: auto;
-  }
-  #root .learner-variant-header a.mx-auto img {
-    height: 50px !important;
-    width: auto;
-  }
   .home > #root header.site-header-desktop .container-fluid,
   .home #root header.site-header-desktop .container-fluid {
     min-height: 60px;
@@ -2037,23 +2012,6 @@ body {
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
-  #root header.site-header-desktop .container-fluid {
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-  }
-  #root header.site-header-desktop .logo img {
-    height: 50px;
-    width: auto;
-  }
-  #root header.customise.learning-header .logo img {
-    height: 50px;
-    width: auto;
-  }
-  #root .learner-variant-header a.mx-auto img {
-    height: 50px !important;
-    width: auto;
-  }
   .home > #root header.site-header-desktop .container-fluid,
   .home #root header.site-header-desktop .container-fluid {
     min-height: 60px;
@@ -4653,15 +4611,11 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
 @media (min-width: 992px) {
   [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo {
     margin: 0 18px 0 0 !important;
-    height: 50px;
-    margin: 5px 18px 5px 0 !important;
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
   [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo {
     margin: 0 18px 0 0 !important;
-    height: 50px;
-    margin: 5px 18px 5px 0 !important;
   }
 }
 [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo img {
@@ -4759,15 +4713,11 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
 @media (min-width: 992px) {
   [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo {
     margin: 0 18px 0 0 !important;
-    height: 50px;
-    margin: 5px 18px 5px 0 !important;
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
   [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo {
     margin: 0 18px 0 0 !important;
-    height: 50px;
-    margin: 5px 18px 5px 0 !important;
   }
 }
 [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo img {
@@ -5154,29 +5104,12 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
   color: var(--pgn-color-text-base);
 }
 [data-paragon-theme-variant=dark] {
-  /* Desktop/laptop only: 50px logo on homepage and logged-in headers.
-     Mobile keeps upstream sizing (21px). */
+  /* Legacy homepage only: desktop/laptop gets 50px logo.
+     Mobile stays upstream. Logged-in pages stay upstream. */
   color: var(--pgn-color-text-base) !important;
   background: var(--pgn-color-body-bg) !important
 }
 @media (min-width: 992px) {
-  [data-paragon-theme-variant=dark] #root header.site-header-desktop .container-fluid {
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-  }
-  [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo img {
-    height: 50px;
-    width: auto;
-  }
-  [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo img {
-    height: 50px;
-    width: auto;
-  }
-  [data-paragon-theme-variant=dark] #root .learner-variant-header a.mx-auto img {
-    height: 50px !important;
-    width: auto;
-  }
   [data-paragon-theme-variant=dark] .home > #root header.site-header-desktop .container-fluid,
   [data-paragon-theme-variant=dark] .home #root header.site-header-desktop .container-fluid {
     min-height: 60px;
@@ -5195,23 +5128,6 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
-  [data-paragon-theme-variant=dark] #root header.site-header-desktop .container-fluid {
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-  }
-  [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo img {
-    height: 50px;
-    width: auto;
-  }
-  [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo img {
-    height: 50px;
-    width: auto;
-  }
-  [data-paragon-theme-variant=dark] #root .learner-variant-header a.mx-auto img {
-    height: 50px !important;
-    width: auto;
-  }
   [data-paragon-theme-variant=dark] .home > #root header.site-header-desktop .container-fluid,
   [data-paragon-theme-variant=dark] .home #root header.site-header-desktop .container-fluid {
     min-height: 60px;
