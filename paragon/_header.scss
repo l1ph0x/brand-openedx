@@ -611,35 +611,68 @@
   }
 }
 
-/* Homepage-only large logo */
-.home > #root,
-.home #root {
-  header.site-header-desktop .logo img,
-  header.site-header-mobile .logo-holder img {
-    height: 50px;
-    width: auto;
-  }
+/* Desktop/laptop only: 50px logo on homepage and logged-in headers.
+   Mobile keeps upstream sizing (21px). */
+@media (--pgn-size-breakpoint-min-width-lg) {
+  #root {
+    header.site-header-desktop {
+      .container-fluid {
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+      }
 
-  header.site-header-desktop .logo {
-    height: 50px;
-    margin: 5px 0 5px 35px !important;
+      .logo {
+        height: 50px;
+        margin: 5px 18px 5px 0 !important;
 
-    @media (--pgn-size-breakpoint-min-width-lg) {
-      margin: 5px 18px 5px 0 !important;
+        img {
+          height: 50px;
+          width: auto;
+        }
+      }
+    }
+
+    header.customise.learning-header {
+      .logo {
+        height: 50px;
+        margin: 5px 18px 5px 0 !important;
+
+        img {
+          height: 50px;
+          width: auto;
+        }
+      }
+    }
+
+    .learner-variant-header {
+      a.mx-auto {
+        img {
+          height: 50px !important;
+          width: auto;
+        }
+      }
     }
   }
 
-  header.site-header-mobile {
-    height: 60px;
+  .home > #root,
+  .home #root {
+    header.site-header-desktop {
+      .container-fluid {
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+      }
 
-    .logo-holder {
-      margin: 5px 0 5px 35px;
+      .logo {
+        height: 50px;
+        margin: 5px 18px 5px 0 !important;
+
+        img {
+          height: 50px;
+          width: auto;
+        }
+      }
     }
-  }
-
-  header.site-header-desktop .container-fluid {
-    height: 60px;
-    display: flex;
-    align-items: center;
   }
 }

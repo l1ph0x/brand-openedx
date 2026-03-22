@@ -1376,6 +1376,7 @@ body {
 }
 #root header.site-header-mobile .logo-holder img {
   height: 21px;
+  width: auto;
 }
 @media (max-width: 992px) {
   #root header.site-header-mobile .menu {
@@ -1406,7 +1407,7 @@ body {
   background: none !important;
   color: var(--pgn-color-text-base);
   left: 15px;
-  top: 18px;
+  top: 22px;
 }
 #root header.site-header-mobile .menu button .hamburger-menu {
   transition: 0.5s ease-in-out;
@@ -1532,15 +1533,20 @@ body {
 @media (min-width: 992px) {
   #root header.site-header-desktop .logo {
     margin: 0 18px 0 0 !important;
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
   #root header.site-header-desktop .logo {
     margin: 0 18px 0 0 !important;
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
   }
 }
 #root header.site-header-desktop .logo img {
   height: 21px;
+  width: auto;
 }
 #root header.site-header-desktop .main-nav a.nav-link {
   font-size: 14px;
@@ -1622,15 +1628,20 @@ body {
 @media (min-width: 992px) {
   #root header.customise.learning-header .logo {
     margin: 0 18px 0 0 !important;
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
   #root header.customise.learning-header .logo {
     margin: 0 18px 0 0 !important;
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
   }
 }
 #root header.customise.learning-header .logo img {
   height: 21px;
+  width: auto;
 }
 #root header.customise.learning-header .course-title-lockup {
   display: flex;
@@ -1664,7 +1675,7 @@ body {
   border-bottom: 2px solid var(--pgn-color-primary-base);
 }
 #root header.customise.learning-header .course-title-lockup .course-info-header {
-  padding: 13px 25px 0 0;
+  padding: 16px 25px 0 0;
 }
 @media (max-width: 992px) {
   #root header.customise.learning-header .course-title-lockup .course-info-header {
@@ -1740,7 +1751,7 @@ body {
     background: none !important;
     position: absolute;
     left: 15px;
-    top: 18px;
+    top: 22px;
   }
 }
 @media (--pgn-size-breakpoint-max-width-md) {
@@ -1749,7 +1760,7 @@ body {
     background: none !important;
     position: absolute;
     left: 15px;
-    top: 18px;
+    top: 22px;
   }
 }
 #root .user-dropdown button:before {
@@ -1936,6 +1947,7 @@ body {
 }
 #root .learner-variant-header a.mx-auto img {
   height: 21px !important;
+  width: auto;
   margin: 0 !important;
 }
 #root .learner-variant-header .flex-grow-1 + .btn-inverse-primary {
@@ -1970,14 +1982,14 @@ body {
   height: auto;
 }
 [dir=ltr] #root .user-dropdown .dropdown-menu {
-  top: 54px;
+  top: 60px;
 }
 #root .nav-small-menu {
   border-bottom: 2px solid var(--pgn-color-primary-base) !important;
   box-shadow: none !important;
   width: 100%;
   position: absolute;
-  top: 56px;
+  top: 60px;
   z-index: 999;
 }
 #root .nav-small-menu a {
@@ -1986,6 +1998,78 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #374151;
+}
+/* Desktop/laptop only: 50px logo on homepage and logged-in headers.
+   Mobile keeps upstream sizing (21px). */
+@media (min-width: 992px) {
+  #root header.site-header-desktop .container-fluid {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  #root header.site-header-desktop .logo img {
+    height: 50px;
+    width: auto;
+  }
+  #root header.customise.learning-header .logo img {
+    height: 50px;
+    width: auto;
+  }
+  #root .learner-variant-header a.mx-auto img {
+    height: 50px !important;
+    width: auto;
+  }
+  .home > #root header.site-header-desktop .container-fluid,
+  .home #root header.site-header-desktop .container-fluid {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .home > #root header.site-header-desktop .logo,
+  .home #root header.site-header-desktop .logo {
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
+  }
+  .home > #root header.site-header-desktop .logo img,
+  .home #root header.site-header-desktop .logo img {
+    height: 50px;
+    width: auto;
+  }
+}
+@media (--pgn-size-breakpoint-min-width-lg) {
+  #root header.site-header-desktop .container-fluid {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  #root header.site-header-desktop .logo img {
+    height: 50px;
+    width: auto;
+  }
+  #root header.customise.learning-header .logo img {
+    height: 50px;
+    width: auto;
+  }
+  #root .learner-variant-header a.mx-auto img {
+    height: 50px !important;
+    width: auto;
+  }
+  .home > #root header.site-header-desktop .container-fluid,
+  .home #root header.site-header-desktop .container-fluid {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .home > #root header.site-header-desktop .logo,
+  .home #root header.site-header-desktop .logo {
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
+  }
+  .home > #root header.site-header-desktop .logo img,
+  .home #root header.site-header-desktop .logo img {
+    height: 50px;
+    width: auto;
+  }
 }
 .wrapper-footer {
   padding: 25px 0;
@@ -4404,6 +4488,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
 }
 [data-paragon-theme-variant=dark] #root header.site-header-mobile .logo-holder img {
   height: 21px;
+  width: auto;
 }
 @media (max-width: 992px) {
   [data-paragon-theme-variant=dark] #root header.site-header-mobile .menu {
@@ -4434,7 +4519,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
   background: none !important;
   color: var(--pgn-color-text-base);
   left: 15px;
-  top: 18px;
+  top: 22px;
 }
 [data-paragon-theme-variant=dark] #root header.site-header-mobile .menu button .hamburger-menu {
   transition: 0.5s ease-in-out;
@@ -4568,15 +4653,20 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
 @media (min-width: 992px) {
   [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo {
     margin: 0 18px 0 0 !important;
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
   [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo {
     margin: 0 18px 0 0 !important;
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
   }
 }
 [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo img {
   height: 21px;
+  width: auto;
 }
 [data-paragon-theme-variant=dark] #root header.site-header-desktop .main-nav a.nav-link {
   font-size: 14px;
@@ -4669,15 +4759,20 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
 @media (min-width: 992px) {
   [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo {
     margin: 0 18px 0 0 !important;
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
   }
 }
 @media (--pgn-size-breakpoint-min-width-lg) {
   [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo {
     margin: 0 18px 0 0 !important;
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
   }
 }
 [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo img {
   height: 21px;
+  width: auto;
 }
 [data-paragon-theme-variant=dark] #root header.customise.learning-header .course-title-lockup {
   display: flex;
@@ -4713,7 +4808,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
   border-bottom: 2px solid var(--pgn-color-text-base);
 }
 [data-paragon-theme-variant=dark] #root header.customise.learning-header .course-title-lockup .course-info-header {
-  padding: 13px 25px 0 0;
+  padding: 16px 25px 0 0;
 }
 @media (max-width: 992px) {
   [data-paragon-theme-variant=dark] #root header.customise.learning-header .course-title-lockup .course-info-header {
@@ -4789,7 +4884,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
   [data-paragon-theme-variant=dark] #root .user-dropdown button {
     position: absolute;
     left: 15px;
-    top: 18px;
+    top: 22px;
     padding: 0 !important;
     background: none !important;
   }
@@ -4798,7 +4893,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
   [data-paragon-theme-variant=dark] #root .user-dropdown button {
     position: absolute;
     left: 15px;
-    top: 18px;
+    top: 22px;
     padding: 0 !important;
     background: none !important;
   }
@@ -4998,6 +5093,7 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
 }
 [data-paragon-theme-variant=dark] #root .learner-variant-header a.mx-auto img {
   height: 21px !important;
+  width: auto;
   margin: 0 !important;
 }
 [data-paragon-theme-variant=dark] #root .learner-variant-header .flex-grow-1 + .btn-inverse-primary {
@@ -5038,14 +5134,14 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
   height: auto;
 }
 [data-paragon-theme-variant=dark] [dir=ltr] #root .user-dropdown .dropdown-menu {
-  top: 54px;
+  top: 60px;
 }
 [data-paragon-theme-variant=dark] #root .nav-small-menu {
   border-bottom: 2px solid var(--pgn-color-primary-base) !important;
   box-shadow: none !important;
   width: 100%;
   position: absolute;
-  top: 56px;
+  top: 60px;
   z-index: 999;
   background: #454545;
 }
@@ -5056,6 +5152,82 @@ div[role=heading].h2 + .list-unstyled.m-0.mt-4.pt-2 li .small.mb-2 {
   line-height: 20px;
   color: #374151;
   color: var(--pgn-color-text-base);
+}
+[data-paragon-theme-variant=dark] {
+  /* Desktop/laptop only: 50px logo on homepage and logged-in headers.
+     Mobile keeps upstream sizing (21px). */
+  color: var(--pgn-color-text-base) !important;
+  background: var(--pgn-color-body-bg) !important
+}
+@media (min-width: 992px) {
+  [data-paragon-theme-variant=dark] #root header.site-header-desktop .container-fluid {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo img {
+    height: 50px;
+    width: auto;
+  }
+  [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo img {
+    height: 50px;
+    width: auto;
+  }
+  [data-paragon-theme-variant=dark] #root .learner-variant-header a.mx-auto img {
+    height: 50px !important;
+    width: auto;
+  }
+  [data-paragon-theme-variant=dark] .home > #root header.site-header-desktop .container-fluid,
+  [data-paragon-theme-variant=dark] .home #root header.site-header-desktop .container-fluid {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  [data-paragon-theme-variant=dark] .home > #root header.site-header-desktop .logo,
+  [data-paragon-theme-variant=dark] .home #root header.site-header-desktop .logo {
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
+  }
+  [data-paragon-theme-variant=dark] .home > #root header.site-header-desktop .logo img,
+  [data-paragon-theme-variant=dark] .home #root header.site-header-desktop .logo img {
+    height: 50px;
+    width: auto;
+  }
+}
+@media (--pgn-size-breakpoint-min-width-lg) {
+  [data-paragon-theme-variant=dark] #root header.site-header-desktop .container-fluid {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  [data-paragon-theme-variant=dark] #root header.site-header-desktop .logo img {
+    height: 50px;
+    width: auto;
+  }
+  [data-paragon-theme-variant=dark] #root header.customise.learning-header .logo img {
+    height: 50px;
+    width: auto;
+  }
+  [data-paragon-theme-variant=dark] #root .learner-variant-header a.mx-auto img {
+    height: 50px !important;
+    width: auto;
+  }
+  [data-paragon-theme-variant=dark] .home > #root header.site-header-desktop .container-fluid,
+  [data-paragon-theme-variant=dark] .home #root header.site-header-desktop .container-fluid {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  [data-paragon-theme-variant=dark] .home > #root header.site-header-desktop .logo,
+  [data-paragon-theme-variant=dark] .home #root header.site-header-desktop .logo {
+    height: 50px;
+    margin: 5px 18px 5px 0 !important;
+  }
+  [data-paragon-theme-variant=dark] .home > #root header.site-header-desktop .logo img,
+  [data-paragon-theme-variant=dark] .home #root header.site-header-desktop .logo img {
+    height: 50px;
+    width: auto;
+  }
 }
 [data-paragon-theme-variant=dark] .wrapper-footer {
   padding: 25px 0;
@@ -8821,8 +8993,4 @@ p > [data-paragon-theme-variant=dark] a.muted-link[href]:not(.btn):hover, [data-
 [data-paragon-theme-variant=dark] .theme-toggle-button .toggle-switch .switch .slider {
   background-color: #ccc;
   box-shadow: 0 0 1px #ccc;
-}
-[data-paragon-theme-variant=dark] {
-  color: var(--pgn-color-text-base) !important;
-  background: var(--pgn-color-body-bg) !important;
 }
