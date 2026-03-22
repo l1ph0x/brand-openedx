@@ -611,50 +611,9 @@
   }
 }
 
-/* Desktop/laptop only: 50px logo on homepage and logged-in headers.
-   Mobile keeps upstream sizing (21px). */
+/* Legacy homepage only: desktop/laptop gets 50px logo.
+   Mobile stays upstream. Logged-in pages stay upstream. */
 @media (--pgn-size-breakpoint-min-width-lg) {
-  #root {
-    header.site-header-desktop {
-      .container-fluid {
-        min-height: 60px;
-        display: flex;
-        align-items: center;
-      }
-
-      .logo {
-        height: 50px;
-        margin: 5px 18px 5px 0 !important;
-
-        img {
-          height: 50px;
-          width: auto;
-        }
-      }
-    }
-
-    header.customise.learning-header {
-      .logo {
-        height: 50px;
-        margin: 5px 18px 5px 0 !important;
-
-        img {
-          height: 50px;
-          width: auto;
-        }
-      }
-    }
-
-    .learner-variant-header {
-      a.mx-auto {
-        img {
-          height: 50px !important;
-          width: auto;
-        }
-      }
-    }
-  }
-
   .home > #root,
   .home #root {
     header.site-header-desktop {
